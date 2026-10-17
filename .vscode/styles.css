@@ -1,0 +1,304 @@
+/* استيراد خط Poppins الجميل والناعم */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #4a5568;
+    background-color: #fdf2f8; /* خلفية وردية فاتحة وناعمة جداً */
+    line-height: 1.7;
+}
+
+/* ========================================================= */
+/*  شريط التنقل العلوي الأنيق                                */
+/* ========================================================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(244, 114, 182, 0.1);
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: #64748b;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #db2777; /* وردي غامق وجذاب عند مرور الماوس */
+}
+
+/* خط تزييني ناعم تحت الرابط */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #db2777;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* عند زيارة الرابط */
+.nav-links a:visited {
+    color: #f472b6;
+}
+
+/* ========================================================= */
+/*  الأقسام الرئيسية                                        */
+/* ========================================================= */
+section {
+    padding: 120px 20px 80px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    max-width: 850px;
+    width: 100%;
+}
+
+/* واجهة الترحيب بتدرجات وردية ساحرة */
+.hero {
+    background: linear-gradient(135deg, #fbcfe8, #f472b6, #db2777);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #fdf2f8;
+}
+
+/* العناوين الفرعية */
+h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #831843;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: #db2777;
+    margin: 8px auto 0 auto;
+    border-radius: 2px;
+}
+
+h3 {
+    margin: 25px 0 15px 0;
+    color: #9d174d;
+    font-weight: 600;
+}
+
+/* قسم نبذة عني والفيديو */
+.about p {
+    font-size: 1.15rem;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+video {
+    max-width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(219, 39, 119, 0.15);
+    border: 3px solid #ffffff;
+}
+
+/* ========================================================= */
+/*  جدول الخبرات بتصميم أنيق ونظيف                          */
+/* ========================================================= */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(244, 114, 182, 0.1);
+}
+
+.styled-table th, .styled-table td {
+    padding: 18px 20px;
+    text-align: left;
+    border-bottom: 1px solid #fce7f3;
+}
+
+.styled-table th {
+    background-color: #f472b6;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.styled-table tr:hover {
+    background-color: #fdf2f8;
+}
+
+/* ========================================================= */
+/*  الأزرار والروابط التفاعلية                                */
+/* ========================================================= */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #db2777, #f472b6);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 8px 20px rgba(219, 39, 119, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(219, 39, 119, 0.4);
+    background: linear-gradient(135deg, #be185d, #db2777);
+}
+
+/* عند زيارة زر الـ CV */
+.btn:visited {
+    background: linear-gradient(135deg, #9d174d, #be185d);
+}
+
+/* ========================================================= */
+/*  نموذج الاتصال (Contact Form)                            */
+/* ========================================================= */
+.contact-form {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(244, 114, 182, 0.1);
+    text-align: left;
+    border: 1px solid #fce7f3;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #831843;
+    font-size: 0.95rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    background: #fdf2f8;
+    border: 1px solid #fbcfe8;
+    border-radius: 10px;
+    color: #4a5568;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #db2777;
+    box-shadow: 0 0 0 3px rgba(219, 39, 119, 0.15);
+    background: white;
+}
+
+/* ========================================================= */
+/*  تذييل الصفحة (Footer)                                   */
+/* ========================================================= */
+footer {
+    background: #831843;
+    color: #fce7f3;
+    text-align: center;
+    padding: 30px;
+    font-size: 0.9rem;
+}
+
+/* ========================================================= */
+/*  التجاوب التام مع الهواتف والشاشات الصغيرة                 */
+/* ========================================================= */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 15px;
+        padding: 0.8rem;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+    section {
+        padding: 100px 15px 50px 15px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+}

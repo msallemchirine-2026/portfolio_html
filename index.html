@@ -1,108 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio</title>
+    <!-- Lier le fichier CSS -->
+    <link rel="stylesheet" href=".vscode\styles.css">
 </head>
 <body>
-    <!-- barre de navigation-->
-    <nav>
-        <ul>
-            <li> <a href="#accueil">Accueil </a> </li>
-            <li> <a href="#apropos">À Propos </a> </li>
-            <li> <a href="#experience"> Expérience professionnelle </a> </li>
-            <li> <a href="#cv">CV </a> </li>
-            <li> <a href="#contact">contact </a> </li>
+    <!-- Barre de navigation -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#apropos">À Propos</a></li>
+            <li><a href="#experience">Expérience</a></li>
+            <li><a href="#cv">CV</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    <!--partie acceuil-->
 
-    <section id="Accueil">
-        <h1> Bienvenue sur mon Portfolio</h1>
-        <p>Développeuse web en formation</p>
+    <!-- Partie Accueil -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1>Bienvenue sur mon Portfolio</h1>
+            <p>Développeuse web en formation</p>
+        </div>
     </section>
-        <!--partie à prppos -->
-        
-    <section id="apropos">
-      <h2>À propos de moi</h2>
-    
-    <p>Passionnée par le développement web et les nouvelles technologies, je suis actuellement
-         en formation pour devenir développeuse web. J'aime apprendre de nouvelles compétences 
-         et créer des projets web interactifs.</p>
-         <h3> présentation vidéo : </h3>
-          <video controls width="320">
-        <source src="video.mp4" type="video/mp4">
-        Votre navigateur ne supporte pas la lecture de vidéos.
-    </video>
+
+    <!-- Partie À propos -->
+    <section id="apropos" class="about">
+        <div class="container">
+            <h2>À propos de moi</h2>
+            <p>Passionnée par le développement web et les nouvelles technologies, je suis actuellement en formation pour devenir développeuse web. J'aime apprendre de nouvelles compétences et créer des projets web interactifs.</p>
+            <h3>Présentation vidéo :</h3>
+            <video controls width="320">
+                <source src="video.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+        </div>
     </section>
-     <!--partie  Expérience professionnelle  -->
 
-<section id="experience">
-    <h2>  Expérience professionnelle    </h2>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Année</th>
-                    <th>Projet </th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>2026</td>
-                    <td>Portfolio HTML</td>
-                    <td>Création de la structure d'un site web personnel en HTML.</td>
-                </tr>
-                <tr>
-                    <td>2026</td>
-                    <td>Projet Git & GitHub</td>
-                    <td>Gestion de version et suivi de projet sur GitHub.</td>
-                </tr>
-                <tr>
-                    <td>2026</td>
-                    <td>Formation Développeur Web</td>
-                    <td>Apprentissage des bases du web, HTML, CSS et VS Code.</td>
-                </tr>
-            </tbody>
-        </table>
+    <!-- Partie Expérience professionnelle -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2>Expérience professionnelle</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Année</th>
+                        <th>Projet</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2026</td>
+                        <td>Portfolio HTML</td>
+                        <td>Création de la structure d'un site web personnel en HTML.</td>
+                    </tr>
+                    <tr>
+                        <td>2026</td>
+                        <td>Projet Git & GitHub</td>
+                        <td>Gestion de version et suivi de projet sur GitHub.</td>
+                    </tr>
+                    <tr>
+                        <td>2026</td>
+                        <td>Formation Développeur Web</td>
+                        <td>Apprentissage des bases du web, HTML, CSS et VS Code.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
 
-</section>
-  <!--partie  cv  -->
+    <!-- Partie CV -->
+    <section id="cv" class="cv-section">
+        <div class="container">
+            <h2>Mon CV</h2>
+            <p>Vous pouvez consulter mon CV en cliquant sur le lien ci-dessous :</p>
+            <a href="cv.pdf" target="_blank" class="btn">Télécharger mon CV (PDF)</a>
+        </div>
+    </section>
 
-<section id="cv">
-    <h2> Mon CV</h2>
-          <p>Vous pouvez consulter mon CV en cliquant sur le lien ci-dessous :</p>
-        <a href="cv.pdf" target="_blank">Télécharger mon CV (PDF)</a>
+    <!-- Partie Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contactez-moi</h2>
+            <form action="" method="post" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nom et Prénom :</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Adresse Email :</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn">Envoyer</button>
+            </form>
+        </div>
+    </section>
 
-</section>
- <!--partie  contact  -->
- <section id="contact">
-       <h2>Contactez-moi</h2>
-        <form action="" method="post">
-            <label for="name">Nom et Prénom :</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-
-            <label for="email">Adresse Email :</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-
-            <label for="message">Message :</label><br>
-            <textarea id="message" name="message" rows="4" cols="30" required></textarea><br><br>
-
-            <button type="submit">Envoyer</button>
-        </form>
-
- </section>
-   <!-- le pied de page.-->
+    <!-- Pied de page -->
     <footer>
-        <p>&copy; 2026 - tous droits est réservés. </p>
-
-
-
+        <p>&copy; 2026 - Tous droits réservés.</p>
     </footer>
-
- 
-
-
 </body>
 </html>
